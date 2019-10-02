@@ -1,13 +1,13 @@
-package ch.puzzle.spring.workshop.springbootexample;
+package ch.puzzle.spring.workshop.beerio;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SpringBootExampleApplicationTests {
 
 	@Test
-	void contextLoads() {
+    public void contextLoads() {
 	}
 
 }
