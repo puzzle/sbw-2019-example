@@ -1,0 +1,8 @@
+server:
+  use-forward-headers: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
