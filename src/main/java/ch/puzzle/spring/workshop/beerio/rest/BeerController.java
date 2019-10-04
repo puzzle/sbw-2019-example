@@ -30,4 +30,10 @@ public class BeerController {
     ) {
         return beerService.findAllByCountry(country);
     }
+
+    @GetMapping("byAlc")
+    @ApiOperation("Top")
+    public Iterable<Beer> findTop10OrderByAlcoholPercent() {
+        return beerService.findTop10OrderByAlcoholPercent();
+    }
 }

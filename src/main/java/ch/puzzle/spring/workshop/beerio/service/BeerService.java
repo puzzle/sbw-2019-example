@@ -17,4 +17,8 @@ public class BeerService {
     public Iterable<Beer> findAllByCountry(String country) {
         return beerRepository.findAllByCountryIgnoreCase(country);
     }
+
+    public Iterable<Beer> findTop10OrderByAlcoholPercent() {
+        return beerRepository.findTop10ByOrderByAlcoholPercentDesc();
+    }
 }

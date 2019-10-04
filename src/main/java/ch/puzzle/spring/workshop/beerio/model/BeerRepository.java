@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BeerRepository extends CrudRepository<Beer, Long> {
     Iterable<Beer> findAllByCountryIgnoreCase(String country);
+
+    Iterable<Beer> findTop10ByOrderByAlcoholPercentDesc();
 }

@@ -1,0 +1,21 @@
+beerio:
+  favoriteBeer: "Leffe"
+
+server:
+  use-forward-headers: true
+
+spring:
+  application:
+    name: beerio
+  boot:
+    admin:
+      client:
+        url: http://spring-boot-admin:8081
+        instance:
+          prefer-ip: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
