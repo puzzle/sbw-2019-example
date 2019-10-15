@@ -1,0 +1,6 @@
+spec:
+  to:
+    kind: Service
+    name: beerio
+  tls:
+    termination: edge
