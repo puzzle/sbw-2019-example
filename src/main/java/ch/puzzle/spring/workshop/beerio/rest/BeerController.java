@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,5 +36,11 @@ public class BeerController {
     @ApiOperation("Top")
     public Iterable<Beer> findTop10OrderByAlcoholPercent() {
         return beerService.findTop10OrderByAlcoholPercent();
+    }
+
+    @PutMapping("recommend/{id}")
+    @ApiOperation("Recommend a beer")
+    public void recommend(@PathVariable long id) {
+        beerService.recommendBeer(id);
     }
 }
